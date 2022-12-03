@@ -1,0 +1,196 @@
+@import "_reset.scss","_mixins.scss","_attribution.scss","keyframes.scss";
+
+.container{
+  transition: .5s ease-in-out;
+  max-width: 90rem;
+  width: 85%;
+  // padding:0 0 2rem;
+  margin: 0 auto;
+  min-height: 100vh;
+}
+.header{
+  // background: $Off-white;
+  padding: 1rem 0;
+  width: 100%;
+  @include flexbox(row, wrap, space-between, center,0);
+  &__nav{
+  }
+  &__button{
+    display: none;
+    cursor: pointer;
+    display: flex;
+  }
+  .menu{
+    display: none;
+  }
+}
+.nav{
+  transition: .5s ease-in-out;
+  &__ul{
+    @include flexbox(row, wrap, flex-end, center,0);
+  }
+  &__li{
+    transition: .5s ease-in-out;
+    margin: 0 .5rem;
+    &:hover{
+      color: $Soft-red;
+    }
+  }
+}
+
+.sections{
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  gap: 1rem;
+  grid-template-areas: 
+  "section1    section1   section2"
+  "section3    section3   section3";
+}
+
+.section1{
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 1rem;
+  grid-area: section1;
+  grid-template-areas: 
+  "picture   picture"
+  "h1    box";
+  &__picture{
+    grid-area: picture;
+  }
+  &__img{
+  }
+  &__h1{
+    grid-area: h1;
+    font-size: 3rem;
+    line-height: 2.8rem;
+    font-weight: 700;
+    padding:0 4rem 0 0;
+  }
+  &__box{
+    grid-area: box;
+    display: flex;
+    flex-flow: column nowrap;
+    justify-content: space-between;
+    align-items: flex-start;
+  }
+  &__p{
+    font-size: .95rem;
+    color: Dark-grayish-blue;
+    padding-bottom: 1rem;
+  }
+  &__btn{
+    padding: 1rem 1.8rem;
+    text-transform: uppercase;
+    letter-spacing: .1rem;
+    font-size: .8rem;
+    font-weight: 600;
+    background: $Soft-red;
+    color: $Off-white;
+    transition: .5s;
+    cursor: pointer;
+    &:hover{
+      background: $Very-dark-blue;
+    }
+  }
+}
+
+.section2{
+  grid-area: section2;
+  background: $Very-dark-blue;
+  color: $Grayish-blue;
+  padding: 2rem 1rem;
+  display: flex;
+  flex-flow: column nowrap;
+  justify-content: space-between;
+  &__h2{
+    font-size: 2rem;
+    color: $Soft-orange;
+    font-weight: 600;
+    margin-bottom: 1.5rem;
+  }
+}
+.article{
+  border-bottom: 1px solid $Grayish-blue;
+  &__h3{
+    font-size: 1.1rem;
+    font-weight: 600;
+    color: $Off-white;
+    transition: .5s;
+    padding: 1rem 0 0;
+    cursor: pointer;
+    &:hover{
+      color: $Soft-orange;
+    }
+  }
+  &__p{
+    font-size: .95rem;
+    padding:1rem 0 1.5rem;
+  }
+  &:last-child{
+    padding-bottom: 0;
+    border-bottom: none;
+    & p{
+      padding: 0;
+    }
+  }
+}
+
+.section3{
+  grid-area: section3;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 1rem;
+  margin-top: 1.5rem;
+}
+.card{
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: center;
+  align-items: stretch;
+  gap: 1rem;
+  min-height: 100%;
+  height: 4rem;
+  &__body{
+    @include grid(3, 1fr);
+    grid-template-areas: 
+    "cover   content   content";
+    min-height: 100%;
+  }
+  &__cover{
+    grid-area: cover;
+    height: 100%;
+    object-fit: cover;
+  }
+  &__content{
+    grid-area: content;
+  }
+}
+.content{
+  padding: 0 1rem;
+  display: flex;
+  flex-flow: column nowrap;
+  justify-content: space-evenly;
+  &__span{
+    color: $Grayish-blue;
+    font-size: 1.8rem;
+    font-weight: 700;
+  }
+  &__h2{
+    font-size: 1rem;
+    font-weight: 600;
+    padding: .75rem 0;
+    transition: .4s;
+    cursor: pointer;
+    &:hover{
+      color: $Soft-red;
+    }
+  }
+  &__p{
+    font-size: .85rem;
+    color: $Dark-grayish-blue;
+  }
+}
+
+@import "medias_responsive";

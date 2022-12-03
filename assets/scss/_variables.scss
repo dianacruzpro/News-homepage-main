@@ -1,0 +1,31 @@
+@charset "UTF-8";
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;700;800&display=swap');
+
+/* ✔Custom Properties */
+
+/* Primary*/
+$Soft-orange: hsl(35, 77%, 62%);
+$Soft-red: hsl(5, 85%, 63%);
+
+/* Neutral*/
+$Off-white: hsl(36, 100%, 99%);
+$Grayish-blue: hsl(233, 8%, 79%);
+$Dark-grayish-blue: hsl(236, 13%, 42%);
+$Very-dark-blue: hsl(240, 100%, 5%);
+
+/* Gradients*/
+$Gradient1:#ffa399 0%, #ff4d97 100%;
+
+
+/* Typography */
+$tipo-principal:  'Inter', sans-serif;
+$tipo-secundaria: Verdana;
+
+/* Responsive */
+$mini-mobile:320px;
+$mobile:375px;
+$big-mobile:480px;
+$mini-tablet:768px;
+$tablet:960px;
+$laptop:1024px;
+$desktop:1440px;
