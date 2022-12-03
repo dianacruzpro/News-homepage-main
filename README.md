@@ -30,8 +30,8 @@ I should be able to:
 
 ### Links
 
-- Solution URL: [Add solution URL here](https://your-solution-url.com)
-- Live Site URL: [Add live site URL here](https://your-live-site-url.com)
+- Solution URL: [Github](https://github.com/dianacruzpro/News-homepage-main/)
+- Live Site URL: [Netlify](https://news-homepage-main-fm.netlify.app/)
 
 ## My process
 
